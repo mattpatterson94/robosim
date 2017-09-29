@@ -2,6 +2,8 @@ require './constants'
 require './commands'
 require './robot'
 
+file = input_file(ARGV)
+
 # Send welcome message
 puts WELCOME
 
@@ -10,7 +12,7 @@ robot = Robot.init
 
 loop do
   # Get user command
-  cmd = await_command
+  cmd = await_command(file)
   # Quit if exit is typed
   break if exit?(cmd)
   # Show help message if help is typed
@@ -29,7 +31,3 @@ end
 
 # Send goodbye message
 puts GOODBYE
-
-# TODO:
-# Check validity of args for place
-# remove extra line on response

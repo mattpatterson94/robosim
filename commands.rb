@@ -1,5 +1,24 @@
+# check if user passed in file
+def input_file(args)
+  file_location = args.pop
+  return nil if file_location.nil?
+
+  begin
+    File.open(file_location, 'r')
+  rescue Errno::ENOENT
+    puts 'File could not be read'
+    exit
+  end
+end
+
 # Nice print awaiting user input and return
-def await_command
+def await_command(file)
+  if file
+    user_input = file.gets
+    return 'EXIT' if user_input.nil?
+    return user_input.chomp.upcase
+  end
+
   print '$ '
   $stdout.flush
 

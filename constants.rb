@@ -1,8 +1,8 @@
 # BOARD
 START_X = 0
 START_Y = 0
-END_X = 100
-END_Y = 100
+END_X = 5
+END_Y = 5
 
 # COMMANDS
 EXIT_COMMAND = 'EXIT'.freeze
