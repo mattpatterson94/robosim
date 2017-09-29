@@ -1,4 +1,4 @@
-require './robosim'
+require './app/robosim'
 
 # Send welcome message
 puts WELCOME

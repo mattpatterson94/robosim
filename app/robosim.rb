@@ -1,6 +1,6 @@
-require './constants'
-require './helpers'
-require './robot'
+require './app/constants'
+require './app/helpers'
+require './app/robot'
 
 # RoboSim - The Application
 class RoboSim
